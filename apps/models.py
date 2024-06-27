@@ -58,7 +58,7 @@ class Worker(models.Model):
 
 
 class Social_media(models.Model):
-    icon = models.CharField()
+    icon = models.CharField(max_length=255)
     url = models.URLField()
 
 class Partner(models.Model):
