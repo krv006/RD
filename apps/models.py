@@ -7,6 +7,9 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+#! Bunga word ni qoshish ichiga 
+
+
 class Product(models.Model):
     LANGUAGE_CHOICES = [
         ('uz', 'Uzbek'),
@@ -46,6 +49,7 @@ class Partner(models.Model):
     def __str__(self):
         return self.url
 
+#! Bunga word ni qoshish ichiga 
 
 class Redikt(models.Model):
     name= models.CharField(max_length=255)
