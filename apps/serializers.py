@@ -11,15 +11,14 @@ class CategorySerializer(serializers.ModelSerializer):
 
 
 class ProductSerializer(serializers.ModelSerializer):
-
     category = serializers.SerializerMethodField()
 
-    def get_category(self,obj):
-        return obj.category.name
-    
+    def get_category(self, obj):
+        return obj.category.name if obj.category else None
+
     class Meta:
         model = Product
-        fields = ['id','name', 'description_uz', 'description_ru', 'description_en', 'language', 'url', 'thumb', 'category', 'date']
+        fields = ['id', 'name', 'description_uz', 'description_ru', 'description_en', 'language', 'url', 'thumb', 'category', 'date']
 
 class Contact_usSerializer(serializers.ModelSerializer):
 
